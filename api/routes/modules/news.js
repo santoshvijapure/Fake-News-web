@@ -7,7 +7,7 @@ const newsController = require('../../controllers/news');
 
 //Get request
 news.get('/', (req, res, next) => {
-    return res.status(200).send('Fake News API');
+	return res.status(200).send('Fake News API');
 });
 
 //Post request for news
