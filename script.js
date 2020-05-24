@@ -5,7 +5,7 @@ const evaluate = async (news) => {
 	embeddings = await encoder.embed(news);
 	arr = await embeddings.array();
 
-	model = await tf.loadLayersModel('https://github.com/santoshvijapure/Fake-News-web/model/model.json');
+	model = await tf.loadLayersModel('https://github.com/santoshvijapure/Fake-News-web/blob/master/model/model.json');
 	console.log(model);
 	result = await model.predict(tf.tensor(arr));
 	result = await result.array();
